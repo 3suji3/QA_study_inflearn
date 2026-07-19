@@ -55,8 +55,14 @@ export default defineConfig({
       ],
       '/appendix/': [
         {
-          text: '부록',
-          items: [{ text: 'QA 영어 기초 표현 정리', link: '/appendix/qa-english-basics' }],
+          text: 'QA 영어',
+          items: [
+            { text: 'QA 영어 기초 로드맵', link: '/appendix/qa-english-basics' },
+            { text: 'QA 기본 용어', link: '/appendix/qa-english-terms' },
+            { text: '테스트 케이스 영어', link: '/appendix/qa-english-test-cases' },
+            { text: '버그 리포트 영어', link: '/appendix/qa-english-bug-reports' },
+            { text: '협업 영어 표현', link: '/appendix/qa-english-collaboration' },
+          ],
         },
       ],
     },
