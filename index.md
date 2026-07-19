@@ -43,6 +43,7 @@ features:
 - [실제 테스트케이스 작성 실습](/class/7.%20%EC%8B%A4%EC%A0%9C%20%ED%85%8C%EC%8A%A4%ED%8A%B8%EC%BC%80%EC%9D%B4%EC%8A%A4%20%EC%9E%91%EC%84%B1%20%EC%8B%A4%EC%8A%B5)
 - [실무 QA의 관찰 포인트 이해](/class/8.%20%EC%8B%A4%EB%AC%B4%20QA%EC%9D%98%20%EA%B4%80%EC%B0%B0%20%ED%8F%AC%EC%9D%B8%ED%8A%B8%20%EC%9D%B4%ED%95%B4)
 - [실무 QA 체크리스트 적용하기](/class/9.%20%EC%8B%A4%EB%AC%B4%20QA%20%EC%B2%B4%ED%81%AC%EB%A6%AC%EC%8A%A4%ED%8A%B8%20%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0)
+- [QA 면접 단골 질문 분석](/class/10.%20QA%20%EB%A9%B4%EC%A0%91%20%EB%8B%A8%EA%B3%A8%20%EC%A7%88%EB%AC%B8%20%EB%B6%84%EC%84%9D)
 - [QA 영어 기초 로드맵](/appendix/qa-english-basics)
 
 ## 배포 링크
