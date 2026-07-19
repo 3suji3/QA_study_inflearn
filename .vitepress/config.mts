@@ -26,9 +26,10 @@ function classSidebarItems() {
 
 export default defineConfig({
   title: 'QA Study',
-  description: '인프런 QA 강의 정리 노트',
+  description: '인프런 QA 강의 기반 실무 QA 학습 노트',
   lang: 'ko-KR',
   cleanUrls: true,
+  lastUpdated: true,
   srcExclude: ['README.md', 'AGENTS.md'],
   themeConfig: {
     logo: '/logo.svg',
@@ -36,6 +37,7 @@ export default defineConfig({
       { text: '홈', link: '/' },
       { text: '강의 노트', link: '/class/1. 실무 QA의 하루 흐름 파악하기' },
       { text: '작성 규칙', link: '/guide' },
+      { text: '배포 사이트', link: 'https://qa-study-inflearn.vercel.app/' },
     ],
     sidebar: {
       '/class/': [
@@ -53,6 +55,21 @@ export default defineConfig({
     },
     search: {
       provider: 'local',
+    },
+    outline: {
+      label: '목차',
+      level: [2, 3],
+    },
+    docFooter: {
+      prev: '이전 글',
+      next: '다음 글',
+    },
+    lastUpdated: {
+      text: '마지막 수정',
+      formatOptions: {
+        dateStyle: 'medium',
+        timeStyle: 'short',
+      },
     },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/3suji3/QA_study_inflearn' },
