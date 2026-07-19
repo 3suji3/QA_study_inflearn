@@ -36,6 +36,7 @@ export default defineConfig({
     nav: [
       { text: '홈', link: '/' },
       { text: '강의 노트', link: '/class/1. 실무 QA의 하루 흐름 파악하기' },
+      { text: 'QA 영어', link: '/appendix/qa-english-basics' },
       { text: '작성 규칙', link: '/guide' },
       { text: '배포 사이트', link: 'https://qa-study-inflearn.vercel.app/' },
     ],
@@ -50,6 +51,12 @@ export default defineConfig({
         {
           text: '가이드',
           items: [{ text: '작성 규칙', link: '/guide' }],
+        },
+      ],
+      '/appendix/': [
+        {
+          text: '부록',
+          items: [{ text: 'QA 영어 기초 표현 정리', link: '/appendix/qa-english-basics' }],
         },
       ],
     },
