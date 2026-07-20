@@ -45,6 +45,7 @@ features:
 - [실무 QA 체크리스트 적용하기](/class/9.%20%EC%8B%A4%EB%AC%B4%20QA%20%EC%B2%B4%ED%81%AC%EB%A6%AC%EC%8A%A4%ED%8A%B8%20%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0)
 - [QA 면접 단골 질문 분석](/class/10.%20QA%20%EB%A9%B4%EC%A0%91%20%EB%8B%A8%EA%B3%A8%20%EC%A7%88%EB%AC%B8%20%EB%B6%84%EC%84%9D)
 - [실습 결과물로 면접 답변 구성하기](/class/11.%20%EC%8B%A4%EC%8A%B5%20%EA%B2%B0%EA%B3%BC%EB%AC%BC%EB%A1%9C%20%EB%A9%B4%EC%A0%91%20%EB%8B%B5%EB%B3%80%20%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0)
+- [신입 및 이직자 면접 실수 피하기](/class/12.%20%EC%8B%A0%EC%9E%85%20%EB%B0%8F%20%EC%9D%B4%EC%A7%81%EC%9E%90%20%EB%A9%B4%EC%A0%91%20%EC%8B%A4%EC%88%98%20%ED%94%BC%ED%95%98%EA%B8%B0)
 - [QA 영어 기초 로드맵](/appendix/qa-english-basics)
 
 ## 배포 링크
