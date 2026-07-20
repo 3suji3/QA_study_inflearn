@@ -3,6 +3,7 @@ import { basename, extname, join } from 'node:path'
 import { defineConfig } from 'vitepress'
 
 const classDir = join(process.cwd(), 'class')
+const bonusDir = join(process.cwd(), 'bonus')
 
 function titleFromFile(fileName: string) {
   return basename(fileName, extname(fileName)).replace(/^\d+\.\s*/, '')
@@ -24,9 +25,45 @@ function classSidebarItems() {
     })
 }
 
+function bonusSidebarItems() {
+  if (!existsSync(bonusDir)) return []
+
+  const order = [
+    'qa-practical-knowledge.md',
+    'test-types-and-strategy.md',
+    'defect-and-release.md',
+    'test-environment-and-data.md',
+  ]
+
+  return readdirSync(bonusDir, { withFileTypes: true })
+    .filter((entry) => entry.isFile() && entry.name.endsWith('.md'))
+    .sort((a, b) => {
+      const aOrder = order.indexOf(a.name)
+      const bOrder = order.indexOf(b.name)
+      const safeAOrder = aOrder === -1 ? Number.MAX_SAFE_INTEGER : aOrder
+      const safeBOrder = bOrder === -1 ? Number.MAX_SAFE_INTEGER : bOrder
+
+      return safeAOrder - safeBOrder || a.name.localeCompare(b.name)
+    })
+    .map((entry) => {
+      const slug = entry.name.replace(/\.md$/, '')
+      const titles: Record<string, string> = {
+        'qa-practical-knowledge': '실무 QA 보너스 지식 지도',
+        'test-types-and-strategy': '테스트 종류와 전략',
+        'defect-and-release': '결함 관리와 릴리즈 판단',
+        'test-environment-and-data': '테스트 환경과 데이터 관리',
+      }
+
+      return {
+        text: titles[slug] ?? titleFromFile(entry.name),
+        link: `/bonus/${slug}`,
+      }
+    })
+}
+
 export default defineConfig({
   title: 'QA Study',
-  description: '인프런 QA 강의 기반 실무 QA 학습 노트',
+  description: '실무 QA를 구조적으로 익히는 학습 노트',
   lang: 'ko-KR',
   cleanUrls: true,
   lastUpdated: true,
@@ -36,6 +73,7 @@ export default defineConfig({
     nav: [
       { text: '홈', link: '/' },
       { text: '강의 노트', link: '/class/1. 실무 QA의 하루 흐름 파악하기' },
+      { text: '보너스 지식', link: '/bonus/qa-practical-knowledge' },
       { text: 'QA 영어', link: '/appendix/qa-english-basics' },
       { text: '작성 규칙', link: '/guide' },
       { text: '배포 사이트', link: 'https://qa-study-inflearn.vercel.app/' },
@@ -51,6 +89,12 @@ export default defineConfig({
         {
           text: '가이드',
           items: [{ text: '작성 규칙', link: '/guide' }],
+        },
+      ],
+      '/bonus/': [
+        {
+          text: '보너스 지식',
+          items: bonusSidebarItems(),
         },
       ],
       '/appendix/': [

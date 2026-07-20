@@ -1,8 +1,8 @@
 :root {
-  --vp-c-brand-1: #2563eb;
-  --vp-c-brand-2: #1d4ed8;
-  --vp-c-brand-3: #3b82f6;
-  --vp-c-brand-soft: rgba(37, 99, 235, 0.12);
+  --vp-c-brand-1: #0f766e;
+  --vp-c-brand-2: #0d9488;
+  --vp-c-brand-3: #14b8a6;
+  --vp-c-brand-soft: rgba(20, 184, 166, 0.14);
   --vp-font-family-base: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
@@ -12,6 +12,10 @@
 
 .vp-doc {
   line-height: 1.78;
+}
+
+.vp-doc a {
+  text-underline-offset: 3px;
 }
 
 .vp-doc h1 {
@@ -37,11 +41,25 @@
   display: table;
   width: 100%;
   font-size: 15px;
+  overflow-wrap: anywhere;
 }
 
 .vp-doc th,
 .vp-doc td {
   vertical-align: top;
+  line-height: 1.65;
+}
+
+.vp-doc th {
+  white-space: nowrap;
+}
+
+.vp-doc blockquote {
+  border-left-color: var(--vp-c-brand-1);
+  color: var(--vp-c-text-1);
+  background: var(--vp-c-brand-soft);
+  border-radius: 0 8px 8px 0;
+  padding: 12px 16px;
 }
 
 .custom-block {
@@ -49,10 +67,32 @@
   border-radius: 8px;
 }
 
+.VPHome .VPHomeHero {
+  padding-top: 64px;
+  padding-bottom: 36px;
+}
+
 .VPHome .VPHomeHero .text {
   line-height: 1.25;
+  max-width: 760px;
+}
+
+.VPHome .VPHomeHero .tagline {
+  max-width: 720px;
+  line-height: 1.7;
 }
 
 .VPHome .VPFeature {
   border-radius: 8px;
+}
+
+@media (max-width: 760px) {
+  .vp-doc table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .vp-doc th {
+    white-space: normal;
+  }
 }
