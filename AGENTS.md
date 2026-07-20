@@ -6,6 +6,7 @@
 - The site uses VitePress from the repository root.
 - Keep navigation/sidebar behavior aligned with `class/*.md` files.
 - When organizing lecture notes, you may add helpful QA practice context, examples, checklists, or interview points as long as they stay within the lecture topic and do not distort the user's original content.
+- Do not force interview Q&A sections into every note; include them only when the topic naturally supports interview preparation.
 - The user handles course-note writing, Vercel deployment, and GitHub push.
 - GitHub target repository: `https://github.com/3suji3/QA_study_inflearn.git`.
 - Follow the user's current commit style: `<type>: <summary>` (example: `feat: Add QA checklist notes`).
